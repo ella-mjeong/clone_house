@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sticky_sv"
+    android:background="@color/white"
+    android:orientation="vertical">
+<!--액션바 생성-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <!--툴바 생성-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="1dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <ImageView
+            android:id="@+id/img_list"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/list" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/round_border"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="30dp"
+                android:layout_height="26dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/search" />
+            <EditText
+                android:layout_width="160dp"
+                android:layout_height="20dp"
+                android:textSize="15dp"
+                android:hint="@string/store_txt_hint_search"
+                android:layout_gravity="center"
+                android:textColorHint="@color/grayBorder"
+                android:background="@color/browser_actions_bg_grey"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/img_scrap"
+            android:layout_width="32dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/scrap" />
+        <ImageView
+            android:id="@+id/img_cart"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/cart" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/background_light"
+        android:elevation="1dp"
+        app:tabMode="scrollable"
+        app:tabGravity="center"
+        app:tabMinWidth="50dp"
+        app:tabIndicatorFullWidth="false"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextColor="@color/colorPrimary">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_tab_store_home" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_tab_premium" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_tab_best" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_tab_today_deal" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_tab_reaper" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_tab_dowry" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_tab_spring" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_tab_plan" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+</com.google.android.material.appbar.AppBarLayout>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vPager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+</androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

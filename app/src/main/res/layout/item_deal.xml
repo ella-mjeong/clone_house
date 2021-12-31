@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_deal_title"
+        android:layout_width="140dp"
+        android:layout_height="145dp"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_item"
+        android:scaleType="fitXY"
+        android:src="@drawable/popular_b1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="220sp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img_deal_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625">
+
+
+        <TextView
+            android:id="@+id/txt_deal_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8sp"
+            android:layout_marginTop="7sp"
+            android:text="@string/product_list_company_tmp"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/txt_deal_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginStart="8sp"
+            android:layout_marginTop="2sp"
+            android:textColor="@color/black"
+            android:text="[쿠폰할인] 콰트로 데스크 시리즈 19size (400~2000mm)"
+            android:textSize="15sp" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/l_deal_scrap"
+        android:layout_width="wrap_content"
+        android:layout_height="16sp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="8sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="스크랩"
+                android:textSize="12sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/txt_deal_scrap_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="425"
+                android:textSize="12sp"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l_deal_review"
+            android:layout_width="wrap_content"
+            android:layout_height="16sp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="8sp">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="15dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/colorMainBlue"
+                app:srcCompat="@drawable/review_star" />
+
+            <TextView
+                android:id="@+id/txt_deal_review_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="1sp"
+                android:text="4.7"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:text="@string/product_list_review"
+                android:textSize="12sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/txt_deal_review_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:text="425"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/deal_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:layout_marginTop="5sp"
+                android:text="42%"
+                android:textSize="17sp"
+                android:textColor="@color/redForDeal"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txt_deal_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2sp"
+                android:layout_marginTop="5sp"
+                android:text="19,900"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_deal_delivery_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginStart="8sp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="4dp"
+                android:textStyle="bold"
+                android:background="@drawable/small_round_border"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/product_list_delivery"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_scrap"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="12dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/img_deal_title"
+        app:layout_constraintEnd_toEndOf="@+id/img_deal_title"
+        app:srcCompat="@drawable/scrap_on_item" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/small_round_border_red"
+        android:paddingHorizontal="3dp"
+        android:paddingVertical="5dp"
+        android:text="@string/deal_six"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/img_deal_title"
+        app:layout_constraintTop_toTopOf="@+id/img_deal_title"
+        tools:ignore="SmallSp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

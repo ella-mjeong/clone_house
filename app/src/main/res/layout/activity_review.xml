@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/l_product_detail_tab2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/l_review_write"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/product_detail_btn_review_write"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="15sp"
+                android:gravity="center"
+                android:text="@string/my_page_list_review_write"
+                android:textColor="@color/colorMainBlue"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_detail_review"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="←"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.509" />
+
+            <TextView
+                android:id="@+id/txt_list_review_write_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6sp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/browser_actions_bg_grey" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginHorizontal="15sp"
+                android:layout_marginVertical="15sp"
+                android:background="@drawable/round_border">
+
+            <ProgressBar
+                android:id="@+id/p_bar5"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="85dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/p_bar4"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="85dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@+id/view3"
+                app:layout_constraintTop_toBottomOf="@+id/p_bar5" />
+
+            <ProgressBar
+                android:id="@+id/p_bar3"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="85dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@+id/view3"
+                app:layout_constraintTop_toBottomOf="@+id/p_bar4" />
+
+            <ProgressBar
+                android:id="@+id/p_bar2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="85dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@+id/view3"
+                app:layout_constraintTop_toBottomOf="@+id/p_bar3" />
+
+            <ProgressBar
+                android:id="@+id/p_bar1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="85dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@+id/view3"
+                app:layout_constraintTop_toBottomOf="@+id/p_bar2" />
+
+            <RatingBar
+                android:id="@+id/review_rating_bar_big"
+                style="?android:ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:stepSize="0.1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.738" />
+
+
+            <TextView
+                android:id="@+id/review_score_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:text="0.0"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="5점"
+                android:textSize="12sp"
+                android:textColor="@color/colorMainBlue"
+                app:layout_constraintBottom_toBottomOf="@+id/p_bar5"
+                app:layout_constraintEnd_toStartOf="@+id/p_bar5"
+                app:layout_constraintTop_toTopOf="@+id/p_bar5" />
+
+            <TextView
+                android:id="@+id/p_bar5_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="0"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/p_bar5"
+                app:layout_constraintStart_toEndOf="@+id/p_bar5"
+                app:layout_constraintTop_toTopOf="@+id/p_bar5" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="4점"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/p_bar4"
+                app:layout_constraintEnd_toStartOf="@+id/p_bar4"
+                app:layout_constraintTop_toTopOf="@+id/p_bar4" />
+
+            <TextView
+                android:id="@+id/p_bar4_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="0"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/p_bar4"
+                app:layout_constraintStart_toEndOf="@+id/p_bar4"
+                app:layout_constraintTop_toTopOf="@+id/p_bar4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="3점"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/p_bar3"
+                app:layout_constraintEnd_toStartOf="@+id/p_bar3"
+                app:layout_constraintTop_toTopOf="@+id/p_bar3" />
+
+
+            <TextView
+                android:id="@+id/p_bar3_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="0"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/p_bar3"
+                app:layout_constraintStart_toEndOf="@+id/p_bar3"
+                app:layout_constraintTop_toTopOf="@+id/p_bar3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="2점"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/p_bar2"
+                app:layout_constraintEnd_toStartOf="@+id/p_bar2"
+                app:layout_constraintTop_toTopOf="@+id/p_bar2" />
+
+            <TextView
+                android:id="@+id/p_bar2_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="0"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/p_bar2"
+                app:layout_constraintStart_toEndOf="@+id/p_bar2"
+                app:layout_constraintTop_toTopOf="@+id/p_bar2" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="1점"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/p_bar1"
+                app:layout_constraintEnd_toStartOf="@+id/p_bar1"
+                app:layout_constraintTop_toTopOf="@+id/p_bar1" />
+
+            <TextView
+                android:id="@+id/p_bar1_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="0"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/p_bar1"
+                app:layout_constraintStart_toEndOf="@+id/p_bar1"
+                app:layout_constraintTop_toTopOf="@+id/p_bar1" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="10dp"
+                android:background="@color/grayBorder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.407"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/browser_actions_bg_grey"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/second_title"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="베스트순"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorMainBlue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="최신순"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView22"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="12dp"
+                android:layout_marginStart="15dp"
+                android:background="@color/grayBorder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView24"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="70dp"
+                android:layout_height="25sp"
+                android:layout_marginHorizontal="15sp"
+                android:background="@drawable/my_page_blue_btn"
+
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5">
+
+                <ImageView
+                    android:layout_width="15sp"
+                    android:layout_height="15sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/filter_icon"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="필터"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사진리뷰"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/gray_down"
+                android:layout_marginStart="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/browser_actions_bg_grey"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/product_review_rv"
+                tools:listitem="@layout/item_review_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

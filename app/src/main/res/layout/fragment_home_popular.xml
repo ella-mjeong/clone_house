@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/l_banner"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/l_current"
+            android:layout_width="65dp"
+            android:layout_height="22dp"
+            android:alpha="0.6"
+            android:orientation="horizontal"
+            android:background="@drawable/number_box_round"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/l_current_content"
+            android:layout_width="65dp"
+            android:layout_height="22dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" >
+        <TextView
+            android:id="@+id/txt_cur_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="12dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="12dp"
+            android:textStyle="bold"
+            android:text="1"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_marginEnd="3dp"
+            android:layout_gravity="center_vertical"
+            android:text="/"
+            android:alpha="0.7"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_see_all"
+            app:layout_constraintEnd_toStartOf="@+id/tv_see_all"
+            app:layout_constraintTop_toTopOf="@+id/tv_see_all" />
+
+        <TextView
+            android:id="@+id/txt_all"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:text="10" />
+
+            <TextView
+                android:id="@+id/tv_see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="+"
+                android:textSize="17dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <ImageView
+                android:id="@+id/img_shopping"
+                android:background="@drawable/item_box_round"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:scaleType="centerInside"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginVertical="5dp"
+                android:paddingHorizontal="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_shopping" />
+
+            <ImageView
+                android:id="@+id/img_wedding"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="25dp"
+                android:scaleType="centerInside"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/item_box_round"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:paddingHorizontal="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_wedding" />
+
+            <ImageView
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="25dp"
+                android:scaleType="centerInside"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/item_box_round"
+                android:id="@+id/img_looking"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:paddingHorizontal="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_look" />
+
+            <ImageView
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerInside"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/item_box_round"
+                android:id="@+id/img_place"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:paddingHorizontal="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_place" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/txt_shopping"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_horizontal"
+                android:text="@string/home_tab_icon_shopping"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/txt_wedding"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_horizontal"
+                android:text="@string/home_tab_icon_wedding"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/txt_looking"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_horizontal"
+                android:text="@string/home_tab_icon_looking"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_horizontal"
+                android:text="@string/home_tab_icon_place"
+                android:textColor="@color/black"/>
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="25dp"
+                android:scaleType="centerInside"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/item_box_round"
+                android:id="@+id/img_consult"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:paddingVertical="2dp"
+                android:paddingLeft="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_consult" />
+
+            <ImageView
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="25dp"
+                android:scaleType="centerInside"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/item_box_round"
+                android:id="@+id/img_find"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:paddingTop="5dp"
+                android:paddingHorizontal="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_find" />
+
+            <ImageView
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="25dp"
+                android:scaleType="centerInside"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/item_box_round"
+                android:id="@+id/img_guide"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:paddingHorizontal="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_guide" />
+
+            <ImageView
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerInside"
+                android:paddingLeft="10dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/item_box_round"
+                android:id="@+id/img_gift"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:paddingHorizontal="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_gift" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/txt_consult"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_horizontal"
+                android:text="@string/home_tab_icon_consult"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/txt_find"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_horizontal"
+                android:text="@string/home_tab_icon_find"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/txt_guide"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_horizontal"
+                android:text="@string/home_tab_icon_guide"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/txt_gift"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_horizontal"
+                android:text="@string/home_tab_icon_gift"
+                android:textColor="@color/black"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/browser_actions_bg_grey" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/popular_title1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center_vertical">
+                </TextView>
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/corner_btn_round"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/check_blue"/>
+                    <TextView
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="6dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorMainBlue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/popular_btn_setting"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/capture1"/>
+
+
+            <Button
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/browser_actions_bg_grey"
+                android:text="@string/popular_btn_more1">
+            </Button>
+        </LinearLayout>
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/browser_actions_bg_grey" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/popular_txt_title2"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical">
+        </TextView>
+
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+                <LinearLayout
+                    android:id="@+id/category_gagu"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:background="@drawable/find_grey_round"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/menu1" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:paddingTop="6dp"
+                        android:textSize="13sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/store_home_menu1"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="95dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:background="@drawable/find_grey_round"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/menu2" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:paddingTop="6dp"
+                        android:textSize="13sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/store_home_menu2"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="95dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/find_grey_round"
+                        android:padding = "10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/menu3" />
+                    <TextView
+                        android:paddingTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:textSize="13sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/store_home_menu3"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="95dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/find_grey_round"
+                        app:srcCompat="@drawable/menu4" />
+                    <TextView
+                        android:paddingTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:textSize="13sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/store_home_menu4"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="95dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/find_grey_round"
+                        app:srcCompat="@drawable/menu5" />
+                    <TextView
+                        android:paddingTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:textSize="13sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/store_home_menu5"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="95dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:background="@drawable/find_grey_round"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/menu6" />
+                    <TextView
+                        android:paddingTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:textSize="13sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/store_home_menu6"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="95dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:background="@drawable/find_grey_round"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/menu7" />
+                    <TextView
+                        android:paddingTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:textSize="13sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/store_home_menu7"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="95dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/find_grey_round"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/menu8" />
+                    <TextView
+                        android:paddingTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:textSize="13sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/store_home_menu8_click"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="95dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/find_grey_round"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/menu9" />
+                    <TextView
+                        android:paddingTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:textSize="13sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/store_home_menu9"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="95dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/find_grey_round"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/menu10" />
+                    <TextView
+                        android:paddingTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:textSize="13sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/store_home_menu10"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grayBorder">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="160dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/browser_actions_bg_grey"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/home_bottom1"/>
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="친구 초대"/>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textSize="10sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5000포인트"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="10sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="선물까지!"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="160dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/browser_actions_bg_grey"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/home_bottom2"/>
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘의집 스토리"/>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textSize="10sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘의집이"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="10sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="궁금해요."/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="160dp"
+                android:background="@color/browser_actions_bg_grey"
+                android:layout_marginBottom="1dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/home_bottom3"/>
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고객센터"/>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textSize="10sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="평일 09:00 ~ 18:00"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="10sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_popular_bottom3"/>
+
+            </LinearLayout>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:paddingVertical="5dp"
+                android:layout_height="110dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/browser_actions_bg_grey"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전문가 회원가입"/>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textSize="10sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="인테리어 전문가님들!"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="10sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘의집과 함께하세요."/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="110dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:paddingVertical="5dp"
+                android:background="@color/browser_actions_bg_grey"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사업자 구매 회원 전환"/>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textSize="10sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사업자 구매 회원에게"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="10sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="혜택을 드립니다."/>
+
+            </LinearLayout>
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_txt_title"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/email_btn_back"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.509" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/bd_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_edit_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_interior_user"
+                >
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="@drawable/all_white_edit_text"
+                android:hint="@string/sign_up_btn_hint_email"
+                android:inputType="text"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textCursorDrawable="@color/colorMainBlue"
+                android:paddingLeft="10dp"
+                android:layout_marginHorizontal="5dp"
+                ></EditText>
+                <TextView
+                    android:id="@+id/txt_red_email"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/sign_up_txt_hint_email_warn"
+                    android:textColor="@color/red"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bd_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_edit_text"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bd_email">
+
+                <EditText
+                    android:id="@+id/edt_pw"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/all_white_edit_text"
+                    android:hint="@string/sign_up_btn_hint_pw"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dp"
+                    android:textCursorDrawable="@color/colorMainBlue"></EditText>
+
+                <TextView
+                    android:id="@+id/txt_red_pw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/sign_up_btn_hint_pw_repeat"
+                    android:textColor="@color/red"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/bd_pw_repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/white_edit_text"
+                app:layout_constraintEnd_toEndOf="@+id/bd_pw"
+                app:layout_constraintStart_toStartOf="@+id/bd_pw"
+                app:layout_constraintTop_toBottomOf="@+id/bd_pw"
+                >
+            <EditText
+                android:id="@+id/edt_pw_repeat"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="@drawable/all_white_edit_text"
+                android:hint="@string/sign_up_btn_hint_pw_repeat"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textCursorDrawable="@color/colorMainBlue"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:layout_marginHorizontal="5dp"
+                 />
+                <TextView
+                    android:id="@+id/txt_red_pw_repeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:visibility="gone"
+                    android:text="@string/sign_up_txt_hint_pw_repeat_warn"
+                    android:textColor="@color/red"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/bd_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_edit_text"
+                app:layout_constraintEnd_toEndOf="@+id/bd_pw_repeat"
+                app:layout_constraintStart_toStartOf="@+id/bd_pw_repeat"
+                app:layout_constraintTop_toBottomOf="@+id/bd_pw_repeat"
+                >
+            <EditText
+                android:id="@+id/edt_nickname"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="@drawable/all_white_edit_text"
+                android:hint="@string/sign_up_btn_hint_nickname"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:layout_marginHorizontal="5dp"
+                android:textCursorDrawable="@color/colorMainBlue"
+                ></EditText>
+                <TextView
+                    android:id="@+id/txt_red_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:visibility="gone"
+                android:text="@string/sign_up_txt_hint_nickname_warn"
+                android:textColor="@color/red"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_signup_complete"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="60dp"
+                android:text="@string/sign_up_btn_sign_up"
+                android:enabled="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                app:layout_constraintVertical_bias="0.696" />
+
+            <TextView
+                android:id="@+id/txt_interior_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/sign_up_txt_pro"
+                app:layout_constraintEnd_toEndOf="@+id/bd_email"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/bd_agree"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/white_edit_text"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/bd_nickname"
+                app:layout_constraintStart_toStartOf="@+id/bd_nickname"
+                app:layout_constraintTop_toBottomOf="@+id/bd_nickname">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_all"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/check_box"
+                        android:button="@color/transparent"
+                        android:checked="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.461" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/sign_up_txt_agree"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/sign_up_txt_agree_all"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/cb_all"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="?android:attr/listDivider" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_age"
+                        android:theme="@style/MyCheckbox"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/check_box"
+                        android:button="@color/transparent"
+                        android:checked="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/sign_up_txt_year"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sign_up_txt_must"
+                        android:textColor="@color/colorMainBlue"
+                        android:textSize="11dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_year"
+                        app:layout_constraintStart_toEndOf="@+id/txt_year"
+                        app:layout_constraintTop_toTopOf="@+id/txt_year"
+                        app:layout_constraintVertical_bias="1.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_service"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/check_box"
+                        android:button="@color/transparent"
+                        android:checked="false"
+                        android:layout_marginEnd="12dp"
+                        android:buttonTint="@color/grayBorder"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/sign_up_txt_context"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sign_up_txt_must"
+                        android:textColor="@color/colorMainBlue"
+                        android:textSize="11dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_service"
+                        app:layout_constraintStart_toEndOf="@+id/txt_service"
+                        app:layout_constraintTop_toTopOf="@+id/txt_service"
+                        app:layout_constraintVertical_bias="1.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_agree"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/check_box"
+                        android:button="@color/transparent"
+                        android:checked="false"
+                        android:layout_marginEnd="12dp"
+                        android:buttonTint="@color/grayBorder"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt_agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/sign_up_txt_service"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sign_up_txt_must"
+                        android:textColor="@color/colorMainBlue"
+                        android:textSize="11dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_agree"
+                        app:layout_constraintStart_toEndOf="@+id/txt_agree"
+                        app:layout_constraintTop_toTopOf="@+id/txt_agree"
+                        app:layout_constraintVertical_bias="1.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_event"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/check_box"
+                        android:button="@color/transparent"
+                        android:checked="false"
+                        android:layout_marginEnd="12dp"
+                        android:buttonTint="@color/grayBorder"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/sign_up_txt_event"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sign_up_txt_not_must"
+                        android:textSize="11dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                        app:layout_constraintStart_toEndOf="@+id/textView12"
+                        app:layout_constraintTop_toTopOf="@+id/textView12"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_red_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/sign_up_txt_agree_warn"
+                android:textColor="@color/red"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/bd_agree"
+                app:layout_constraintTop_toBottomOf="@+id/bd_agree" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/sign_up_txt_recommend"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/bd_agree"
+                app:layout_constraintTop_toBottomOf="@+id/txt_red_agree" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:background="@drawable/white_edit_text"
+                app:layout_constraintEnd_toEndOf="@+id/bd_agree"
+                app:layout_constraintStart_toStartOf="@+id/bd_agree"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <EditText
+                    android:id="@+id/edt_recommend"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:background="@drawable/all_white_edit_text"
+                    android:hint="@string/sign_up_txt_hint_code"
+                    android:paddingLeft="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:textCursorDrawable="@color/colorMainBlue"
+                    app:layout_constraintEnd_toEndOf="@+id/bd_agree"
+                    app:layout_constraintStart_toStartOf="@+id/bd_agree"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6">
+                </EditText>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="@string/sign_up_btn_ok"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorMainBlue"
+                    android:layout_height="40dp"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

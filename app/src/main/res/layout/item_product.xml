@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_title"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_item"
+        android:scaleType="fitXY"
+        android:src="@drawable/popular_b1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_list_company_tmp"
+        android:textSize="9sp"
+        android:layout_marginTop="7sp"
+        android:layout_marginStart="8sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_title"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="2sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="13sp"
+        android:text="[주말특가] 홈카페 가구시리즈 18종"
+        app:layout_constraintStart_toStartOf="@+id/txt_top"
+        app:layout_constraintTop_toBottomOf="@+id/txt_top" />
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="42%"
+        android:layout_marginTop="5sp"
+        android:layout_marginStart="8sp"
+        android:textColor="@color/colorMainBlue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="19,900"
+        android:layout_marginTop="5sp"
+        android:layout_marginStart="2sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/discount"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+   <LinearLayout
+       android:visibility="gone"
+       android:id="@+id/l_scrap"
+       android:layout_width="wrap_content"
+       android:layout_height="16sp"
+       android:orientation="horizontal"
+       app:layout_constraintStart_toStartOf="@+id/discount"
+       app:layout_constraintTop_toBottomOf="@+id/discount">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="스크랩"
+           android:layout_gravity="center"
+           android:textSize="10sp"
+           tools:ignore="SmallSp"/>
+       <TextView
+           android:id="@+id/txt_scrap_num"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="425"
+           android:layout_gravity="center"
+           android:textSize="10sp"
+           tools:ignore="SmallSp" />
+   </LinearLayout>
+   <LinearLayout
+       android:id="@+id/l_review"
+       android:layout_width="wrap_content"
+       android:layout_height="16sp"
+       app:layout_constraintStart_toStartOf="@+id/discount"
+       app:layout_constraintTop_toBottomOf="@+id/discount"
+       android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="13dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/colorMainBlue"
+        app:srcCompat="@drawable/review_star" />
+    <TextView
+        android:id="@+id/txt_review_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.7"
+        android:layout_marginStart="1sp"
+        android:layout_gravity="center"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/product_list_review"
+        android:layout_gravity="center"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/txt_review_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="425"
+        android:layout_gravity="center"
+        android:layout_marginStart="2dp"
+        android:textSize="10sp"/>
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="17sp"
+        app:layout_constraintStart_toStartOf="@+id/l_review"
+        app:layout_constraintTop_toBottomOf="@+id/txt_price">
+
+        <TextView
+            android:id="@+id/txt_delivery_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/small_round_border"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/product_list_delivery"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/txt_price_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/small_round_border_red"
+            android:padding="2dp"
+            android:text="@string/product_list_special_price"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/txt_delivery_check"
+            tools:ignore="SmallSp"
+            tools:layout_editor_absoluteY="278dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_scrap"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="12dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/img_title"
+        app:layout_constraintEnd_toEndOf="@+id/img_title"
+        app:srcCompat="@drawable/scrap_on_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
